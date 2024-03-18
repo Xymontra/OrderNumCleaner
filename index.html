@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Number Formatter</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Order Numbers</h2>
+        <form onsubmit="return formatAndDisplay();">
+            <label for="orderNumbers">Before:</label>
+            <textarea id="orderNumbers" rows="10" cols="50"></textarea><br>
+            <input type="submit" value="Format">
+        </form>
+        <h3>Formatted Numbers:</h3>
+        <label for="formattedNumbers">After:</label>
+        <p id="formattedNumbers"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

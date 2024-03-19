@@ -31,4 +31,6 @@ Contributions are welcome! If you have an idea for an improvement or have found 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b8667ba4-d31e-4e93-a552-1e92bf696758/deploy-status)](https://app.netlify.com/sites/ordernumcleaner/deploys)
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b8667ba4-d31e-4e93-a552-1e92bf696758/deploy-status)](https://ordernumcleaner.netlify.app/)

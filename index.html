@@ -3,18 +3,28 @@
 <head>
     <title>Order Number Formatter</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome icon library -->
 </head>
 <body>
     <div class="container">
-        <h2>Enter Order Numbers</h2>
-        <form onsubmit="return formatAndDisplay();">
-            <label for="orderNumbers">Before:</label>
-            <textarea id="orderNumbers" rows="10" cols="50"></textarea><br>
-            <input type="submit" value="Format">
-        </form>
-        <h3>Formatted Numbers:</h3>
-        <label for="formattedNumbers">After:</label>
-        <p id="formattedNumbers"></p>
+        <div id="inputSection">
+            <h2>Enter Order Numbers</h2>
+            <form onsubmit="return formatAndDisplay();">
+                <label for="orderNumbers">Before:</label>
+                <textarea id="orderNumbers" rows="10" cols="50"></textarea><br>
+                <input type="submit" value="Format" class="format-button">
+            </form>
+        </div>
+        <div id="resultSection" class="hidden">
+            <h3>Formatted Numbers:</h3>
+            <label for="formattedNumbers">After:</label>
+            <div class="result-box" id="formattedNumbers"></div>
+            <div class="button-group">
+                <button onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copy</button>
+                <button onclick="resetForm()"><i class="fas fa-redo"></i> Clear</button>
+            </div>
+        </div>
+        <div id="notification" class="notification"></div>
     </div>
 
     <script src="js/script.js"></script>

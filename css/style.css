@@ -19,6 +19,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 form {
@@ -113,6 +115,170 @@ input[type="submit"] {
 .success {
     display: block; /* Show the notification on success */
     background-color: #28a745; /* Green background for success message */
+}
+
+/* Minimal Changelog Styles */
+.changelog-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1c1e24;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    width: 80%;
+    max-width: 600px;
+    font-size: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    min-height: 20px; /* Ensure minimum height to prevent shifting */
+}
+
+.changelog-container h3 {
+    color: #10d26d;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative; /* Ensure h3 stays in place */
+    height: 1.2em; /* Maintain height for cursor */
+    display: inline-flex;
+}
+
+.typing-cursor {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-left: 2px;
+    /*animation: blink 1.4s linear infinite;*/ /* Slow down blinking and make it smooth */
+    position: absolute; /* Make cursor position absolute to avoid shifting */
+    right: -10px; /* Adjust position to fit after the text */
+}
+
+.typing-icon {
+    color: #FFD700;
+    font-size: 1.2em;
+    margin-left: 5px;
+    display: none; /* Hide icon by default */
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.changelog {
+    list-style-type: none; /* Remove default list style */
+    padding-left: 0;
+}
+
+.changelog li {
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.changelog li i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #FFD700; /* Icon color */
+}
+
+.changelog li:hover i {
+    color: #10d26d; /* Change icon color on hover */
+}
+
+.changelog li:hover {
+    color: #10d26d;
+}
+
+/* Highlight Uğur with a glowing effect and add spacing */
+.highlight-ugur {
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space: nowrap; /* Prevent breaking the Uğur text */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FF4500;
+    }
+    to {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FF4500;
+    }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 0 auto;
+        width: 95%; /* Reduce container width on mobile devices */
+    }
+
+    h2, h3 {
+        font-size: 1.2em; /* Reduce heading font size on mobile devices */
+    }
+
+    textarea, .result-box {
+        font-size: 0.9em; /* Reduce text font size on mobile devices */
+    }
+
+    input[type="submit"], button {
+        padding: 8px 12px; /* Reduce button padding on mobile devices */
+        font-size: 0.8em; /* Reduce button font size on mobile devices */
+    }
+
+    /* Adjust spacing around Uğur for smaller screens */
+    .highlight-ugur {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 80%; /* Adjust container width on tablet devices */
+    }
+
+    h2, h3 {
+        font-size: 1.3em; /* Adjust heading font size on tablet devices */
+    }
+
+    textarea, .result-box {
+        font-size: 1em; /* Adjust text font size on tablet devices */
+    }
+
+    input[type="submit"], button {
+        padding: 10px 20px; /* Adjust button padding on tablet devices */
+        font-size: 0.9em; /* Adjust button font size on tablet devices */
+    }
+
+    /* Adjust spacing around Uğur for tablet screens */
+    .highlight-ugur {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
 }
 
 @media (max-width: 768px) {
